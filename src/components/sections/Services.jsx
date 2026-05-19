@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { motion } from "framer-motion";
 import { Check, Clock, ShieldCheck } from "lucide-react";
+import { trackWhatsAppClick } from "../../lib/pixel";
 
 const Services = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -15,7 +16,7 @@ const Services = () => {
       price: "499rb",
       duration: "3–5 Hari",
       description:
-        "Landing page praktis untuk validasi ide bisnis dan mulai bangun branding.",
+        "Landing page praktis untuk validasi ide bisnis and mulai bangun branding.",
       features: [
         "Landing Page Fokus Konversi",
         "Domain .my.id, .web.id & Hosting",
@@ -195,6 +196,7 @@ const Services = () => {
                         : "bg-slate-900 hover:bg-slate-800 text-white"
                     }`}
                     onClick={() => {
+                      trackWhatsAppClick(`service_package_${service.id}`);
                       const msg = encodeURIComponent(
                         `Halo, saya ingin tanya paket ${service.title}`,
                       );
@@ -252,11 +254,12 @@ const Services = () => {
               <motion.div
                 whileHover={{ y: -5 }}
                 className="group relative overflow-hidden bg-gradient-to-r from-blue-600/10 via-indigo-600/10 to-transparent p-6 rounded-3xl border border-blue-500/20 cursor-pointer"
-                onClick={() =>
+                onClick={() => {
+                  trackWhatsAppClick('services_custom_idea');
                   window.open(
                     `https://wa.me/${whatsappNumber}?text=Halo, saya punya ide fitur custom untuk website saya...`,
                   )
-                }
+                }}
               >
                 <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                   <div className="flex items-start gap-4">

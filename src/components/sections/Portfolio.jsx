@@ -2,6 +2,7 @@ import React from "react";
 import { Badge } from "../ui/badge";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Lock } from "lucide-react";
+import { trackWhatsAppClick } from "../../lib/pixel";
 
 const Portfolio = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -187,7 +188,8 @@ const Portfolio = () => {
             <a
               href={waUrl}
               target="_blank"
-              rel="noopener noreferrer" 
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('portfolio_footer_cta')}
               className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.5)] active:scale-95 flex items-center gap-2 mx-auto w-max"
             >
               Konsultasi Gratis <ArrowRight size={20} />

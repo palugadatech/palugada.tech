@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
+import { trackWhatsAppClick } from '../../lib/pixel';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,7 +57,14 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild variant="default" size="sm">
-            <a href={waUrl} target="_blank" rel="noopener noreferrer">Konsultasi Gratis</a>
+            <a 
+              href={waUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('navbar_desktop')}
+            >
+              Konsultasi Gratis
+            </a>
           </Button>
         </div>
 
@@ -84,7 +92,14 @@ const Navbar = () => {
             </a>
           ))}
           <Button asChild className="w-full">
-            <a href={waUrl} target="_blank" rel="noopener noreferrer">Konsultasi Gratis</a>
+            <a 
+              href={waUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('navbar_mobile')}
+            >
+              Konsultasi Gratis
+            </a>
           </Button>
         </div>
       )}

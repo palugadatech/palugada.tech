@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../ui/button';
 import { motion } from 'framer-motion';
 import webMockup from "../../../public/web_mockup.jpg"
+import { trackWhatsAppClick } from '../../lib/pixel';
 
 const Hero = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -30,7 +31,14 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="xl" variant="whatsapp">
-              <a href={waUrl} target="_blank" rel="noopener noreferrer">Mau Tanya-Tanya Dulu</a>
+              <a 
+                href={waUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackWhatsAppClick('hero_cta')}
+              >
+                Mau Tanya-Tanya Dulu
+              </a>
             </Button>
             <Button asChild size="xl" variant="outline">
               <a href="#portfolio">Lihat Hasil Kerja Kami</a>

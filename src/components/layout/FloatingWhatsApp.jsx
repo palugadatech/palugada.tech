@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackWhatsAppClick } from '../../lib/pixel';
 
 const FloatingWhatsApp = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,6 +28,7 @@ const FloatingWhatsApp = () => {
           href={waUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsAppClick('floating_button')}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0, opacity: 0 }}

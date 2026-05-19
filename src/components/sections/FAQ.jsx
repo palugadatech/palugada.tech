@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
+import { trackWhatsAppClick } from '../../lib/pixel';
 
 const FAQ = () => {
   const faqs = [
@@ -60,6 +61,7 @@ const FAQ = () => {
             href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Halo%20palugada.tech%2C%20ada%20yang%20ingin%20saya%20tanyakan%20lagi.`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('faq_section')}
             className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-white text-primary font-bold hover:bg-slate-100 transition-colors"
           >
             Hubungi Lewat WA Sekarang

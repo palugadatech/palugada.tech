@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, MessageCircle, Globe } from 'lucide-react';
+import { trackWhatsAppClick } from '../../lib/pixel';
 
 const Footer = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -24,7 +25,14 @@ const Footer = () => {
             Solusi pembuatan website profesional dan terjangkau untuk UMKM Indonesia. Kami bantu bisnis Anda go digital dengan proses yang cepat dan transparan.
           </p>
           <div className="flex gap-4">
-            <a href={waUrl} className="hover:text-white transition-colors" aria-label="WhatsApp"><MessageCircle size={20} /></a>
+            <a 
+              href={waUrl} 
+              className="hover:text-white transition-colors" 
+              aria-label="WhatsApp"
+              onClick={() => trackWhatsAppClick('footer_icon')}
+            >
+              <MessageCircle size={20} />
+            </a>
             <a href="#" className="hover:text-white transition-colors" aria-label="Website"><Globe size={20} /></a>
             <a href="mailto:palugadatech.official@gmail.com" className="hover:text-white transition-colors" aria-label="Email"><Mail size={20} /></a>
           </div>
@@ -46,7 +54,15 @@ const Footer = () => {
             <li><a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a></li>
             <li><a href="#workflow" className="hover:text-white transition-colors">Cara Kerja</a></li>
             <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-            <li><a href={waUrl} className="hover:text-white transition-colors">Kontak</a></li>
+            <li>
+              <a 
+                href={waUrl} 
+                className="hover:text-white transition-colors"
+                onClick={() => trackWhatsAppClick('footer_link')}
+              >
+                Kontak
+              </a>
+            </li>
           </ul>
         </div>
       </div>
