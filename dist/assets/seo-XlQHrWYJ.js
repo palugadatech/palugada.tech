@@ -1,0 +1,1 @@
+const n="palugada.tech",t="https://palugadatech.my.id",c=`${t}/logo_palugada_tech.png`;function e(a="/"){const o=a==="/"?"/":`/${a.replace(/^\/+/,"")}`;return new URL(o,t).toString()}export{c as D,n as S,e as a};

@@ -10,6 +10,36 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "SafeMind",
+      category: "AI-powered Website",
+      link: "https://safe-mind-palugadatech.vercel.app/",
+      image: "/portofolio/safe-mind.png",
+      tag: "AI Application",
+      description:
+        "Asisten kesehatan mental berbasis AI yang membantu pengguna mengelola kesejahteraan emosional melalui jurnal cerdas dan analisis personal.",
+      isPrivate: false,
+    },
+    {
+      title: "BBMD STORE",
+      category: "Web Application (Sistem Custom)",
+      link: "#",
+      image: "/portofolio/bbmd-store.png",
+      tag: "Enterprise",
+      description:
+        "Sistem POS Internal: Manajemen stok, produk, dan analisis penjualan dalam satu dashboard terintegrasi.",
+      isPrivate: true,
+    },
+    {
+      title: "Brama2689",
+      category: "Personal Portfolio",
+      link: "https://cv-brama.vercel.app/",
+      image: "/portofolio/brama.png",
+      tag: "Branding",
+      description:
+        "Digital resume & portfolio dengan pendekatan desain personal yang elegan untuk memperkuat branding profesional.",
+      isPrivate: false,
+    },
+    {
       title: "Putra Interior",
       category: "Service & Portfolio",
       link: "https://putra-interior.vercel.app/",
@@ -38,27 +68,6 @@ const Portfolio = () => {
       description:
         "Website e-commerce fashion modern yang menonjolkan karakter brand melalui layout katalog minimalis.",
       isPrivate: false,
-    },
-    {
-      title: "Brama2689",
-      category: "Personal Portfolio",
-      link: "https://cv-brama.vercel.app/",
-      image: "/portofolio/brama.png",
-      tag: "Branding",
-      description:
-        "Digital resume & portfolio dengan pendekatan desain personal yang elegan untuk memperkuat branding profesional.",
-      isPrivate: false,
-    },
-    {
-      title: "BBMD STORE",
-      category: "Web Application (Sistem Custom)",
-      link: "#",
-      image: "/portofolio/bbmd-store.png",
-      tag: "Enterprise",
-      description:
-        "Sistem POS Internal: Manajemen stok, produk, dan analisis penjualan dalam satu dashboard terintegrasi.",
-      isPrivate: true,
-      featured: true, 
     },
   ];
 
