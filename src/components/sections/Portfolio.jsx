@@ -10,6 +10,17 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "Berlian90",
+      category: "CRM & Loyalty Platform",
+      link: "https://berlian90.com/",
+      image: "/portofolio/berlian90.png",
+      tag: "Enterprise",
+      description:
+        "Ekosistem CRM dan loyalty terintegrasi POS yang meningkatkan retensi pelanggan serta efisiensi operasional melalui keanggotaan bertingkat, gimik interaktif, dan analisis data terpusat.",
+      isPrivate: false,
+      featured: true,
+    },
+    {
       title: "SafeMind",
       category: "AI-powered Website",
       link: "https://safe-mind-palugadatech.vercel.app/",
@@ -47,26 +58,6 @@ const Portfolio = () => {
       tag: "Freelance",
       description:
         "Platform showcase jasa interior profesional dengan galeri visual yang bersih dan navigasi intuitif.",
-      isPrivate: false,
-    },
-    {
-      title: "Dapur Rasa Nusantara",
-      category: "Landing Page",
-      link: "https://dapur-rasa-nusantara.vercel.app/",
-      image: "/portofolio/dapur-rasa-nusantara.png",
-      tag: "Kuliner",
-      description:
-        "Landing page kuliner dengan optimasi visual menu yang menggugah selera untuk meningkatkan konversi reservasi.",
-      isPrivate: false,
-    },
-    {
-      title: "Vestra",
-      category: "Fashion Brand",
-      link: "https://vestra-ochre.vercel.app/",
-      image: "/portofolio/vestra.png",
-      tag: "E-Commerce",
-      description:
-        "Website e-commerce fashion modern yang menonjolkan karakter brand melalui layout katalog minimalis.",
       isPrivate: false,
     },
   ];
